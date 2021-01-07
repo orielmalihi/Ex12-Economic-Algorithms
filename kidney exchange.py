@@ -9,6 +9,7 @@ def find_max_matches(compatible: List[List[bool]]):
     compatible[i][i] = False, otherwise the donor in this couple could donate to
     the recipient in this couple and they would not need any cycle. (you could say they
     have "Length 1 cycle" which is not interesting).
+
     >>> mat = [[False, True], # couple 0 can donate to couple 1
     ...       [True, False]] # couple 1 can donate to couple 0
     >>> res = find_max_matches(mat)
@@ -16,6 +17,7 @@ def find_max_matches(compatible: List[List[bool]]):
     ...     print(c)
     Length 2 cycle: 0->1 and 1->0
     Length 2 cycle: 1->0 and 0->1
+
     >>> mat = [[False, True, False],
     ...       [True, False, True],
     ...       [True, False, False]]
